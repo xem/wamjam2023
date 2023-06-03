@@ -42,7 +42,7 @@ draw_screen = () => {
   // World 0: main menu
   if(W == 0){
     p = 0;
-    H = "<div class=m><h1>LOSSST</h1><b>A Snake in Space</b><p><a onclick='cont();fadeout()'><h2>"+(save[1][1]?coins>164?"HARD MODE":"Continue":"PLAY")+"</h2></a><p><a onclick=W=-1;fadeout()>Select puzzle</a><p><a onclick=W=-2;fadeout()>Bonus</a><p class='emoji hide'>🌼";
+    H = "<div class=m><h1>LOSSST</h1><p><a onclick='cont();fadeout()'><h2>"+(save[1][1]?"Continue":"PLAY")+"</h2></a><p><a onclick=W=-1;fadeout()>Select puzzle</a><p><a onclick=W=-2;fadeout()>Web3/AI&nbsp;bonuses</a><p class='emoji hide'>🌼";
     s.innerHTML = H;
   }
   
@@ -54,15 +54,11 @@ draw_screen = () => {
         if(i == 4) H += "<h2>The Moon!</h2>";
         else H += "<h2>World " + i + "</h2>";
         if(i==1){
-          H += "<span style='width:61vh' onclick='W=-3;p=0;fadeout()'>Intro</span><br>";
         }
         if(coins < [0,0,25,50,100][i]){
           H += [0,0,25,50,100][i] + " coins to unlock";
         }
         else {
-          if(i==4){
-          H += "<span style='width:61vh' onclick='W=-4;fadeout()'>Take off!</span><br>";
-        }
           for(j in data[i]){
             //if(i==1)console.log(save[i][j], data[i][j]);
             if(j != 0){
@@ -77,7 +73,7 @@ draw_screen = () => {
   
   // World -2: Bonus
   else if(W == -2){
-    H = `<div class='m o'><h1>BONUS</h1><p><a href="${document.monetization&&document.monetization.state=="started"?"//xem.github.io/js13k21/editor":"//coil.com/login"}" target=_blank>Puzzle editor</a><span>(WebMonetization bonus)<p><a href="//xem.github.io/js13k21/FLUX" target=_blank>Snake editor</a><span>(FLUX bonus)<p><a href="//xem.github.io/js13k21/IPFS" target=_blank>Leaderboards</a><span>(IPFS bonus)<p><a href="//xem.github.io/js13k21/NEAR"  target=_blank>Shop</a><span>(NEAR bonus)<p><a onclick='if(confirm("Sure?"))delete localStorage.lossst,location=location'>Delete save</a><p><a href="//xem.github.io/js13k21/share#${JSON.stringify(save)}">Share</a><p><a href="//xem.github.io/articles/js13k21.html">Making-of`;
+    H = `<div class='m o'><h1>BONUS</h1><p><a href="${document.monetization&&document.monetization.state=="started"?"//xem.github.io/wamjam2023/editor":"//coil.com/login"}" target=_blank>Puzzle editor</a><p><a href="//xem.github.io/wamjam2023/FLUX" target=_blank>Skin editor</a><p><a href="//xem.github.io/wamjam2023/IPFS" target=_blank>Leaderboards</a><p><a href="//xem.github.io/wamjam2023/NEAR"  target=_blank>Web3 Shop</a><p><a onclick='if(confirm("Sure?"))delete localStorage.lossst,location=location'>Delete save</a>`;
     s.innerHTML = H;
   }
   
@@ -213,7 +209,7 @@ fadeout = (text) => {
     }
     if(lW == 4 && secret == 4){
       setTimeout(()=>{b.classList.add("egg4");lp = lW = 0;}, 2500);
-      setTimeout(()=>{open("//xem.github.io/js13k21/share#"+JSON.stringify(save))}, 11500);
+      setTimeout(()=>{open("//xem.github.io/wamjam2023/share#"+JSON.stringify(save))}, 11500);
     }
     setTimeout(draw_screen, ((lW== 3 && secret == 10) || (lW== 4 && secret == 4)) ? 12000 : 4000);
     
@@ -232,7 +228,7 @@ intro = () => {
   C.R();
   
   if(W == -3) song = 0;
-  e.innerHTML = "js13kGames<br>presents";
+  e.innerHTML = "Wam Jam<br>presents";
   
   play_note(1);
   play_note(1);
@@ -253,7 +249,10 @@ intro = () => {
     b.classList.add("intro") // Hide back button, enable 5s transitions
     setTimeout(()=>{fd.style.height = '1450px'},100); // Fx fix
     clearInterval(I);
-    I = setInterval(play_next_note,210);
+    play_note(1);
+  play_note(1);
+  play_note(1);
+  I = setInterval(play_next_note,210);
   }, 100);
   
   snake_length = 2; // without head  
@@ -319,13 +318,14 @@ intro = () => {
   
   // Move right 7 times (world 1) / 10 times (world 4)
   for(i = 0; i < (7 + ((W == -3) ? 0 : 3)); i++){
+    
     setTimeout(()=>{r=1;a=0;move_snake(b);r=0;}, 300 + i * 250);
   }
     
   // Animation (world 1):
   if(W == -3){
     
-    // Sign
+    /*// Sign
     C.plane({x:300,y:220,w:5,h:105,z:55,rx:-90,ry:-35,css:"sign"});
     C.plane({x:300,y:221,w:100,h:60,z:72,rx:-90,ry:-35,css:"sign",H:"SALE<p><span class=e>🪙</span> x 100"});
     
@@ -379,14 +379,21 @@ intro = () => {
     setTimeout(()=>{
       W= 1;
       p = 1;
-      fadeout("<h1>LOSSST</h1>A Snake in Space");
+      fadeout("<h1>LOSSST</h1>");
     }, 30000);
     
     setTimeout(()=>{
       clearInterval(I);
       song = 1;
       note = 75;
-    }, 33000);
+    }, 33000);*/
+    clearInterval(I);
+    song = 1;
+    note = 1;
+    W= 1;
+    p = 1;
+    fadeout("<h1>WAM JAM presents</h1>");
+    
   }
   
   // World 4
@@ -422,7 +429,16 @@ intro = () => {
 
 cont = () => {
   
-  if(coins > 164) location = "//xem.github.io/js13k21/HARD";
+    //console.log(W, p);
+  if(W == 0 && p == 0){
+    //console.log(1);
+    play_note(1);
+    play_note(1);
+    play_note(1);
+    I = setInterval(play_next_note,400);
+  }
+  
+  //if(coins > 164) location = "//xem.github.io/wamjam2023/HARD";
   //W= p = 1;
   var i,j;
   if(save[1][1]){
@@ -438,7 +454,7 @@ cont = () => {
     }
   }
   else{
-    W= -3;
-    p = 0;
+    W = 1;
+    p = 1;
   }
 }

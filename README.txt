@@ -1,9 +1,7 @@
-js13K 2021 game
+Wam jam 2023 game
 ===
 
 All rights reserved
-
-Distribution only allowed to js13kGames.com
 
 
 Track list:
@@ -18,19 +16,3 @@ Track list:
 - 8: Ludwig van Beethoven - Für Elise, WoO 59
 - 9: Johann Sebastien Bach - Bwv1067 Orchestral Suite No. 2 - Badinerie
 - 10: Johann Strauss - Blue Danube
-
-
-Other track ideas:
-
-- Johann Sebastian Bach - Orchestral Suite No 2 in B Minor "badinerie"
-- Ludwig Von Beethoven - Symphony no 5 in C Minor, Op 67 allegro con brio
-- Georges Bizet - L'Arlésienne suite no 2 IV. Farandole
-- Johann Strauss - Tritsch-tratsch polka
-- Edward Elgar - Pomp & Circumstance March no 1
-- Richard Wagner - Die Walküre WWV 86B
-- Tchaikovski - Op 49, 1812 Overture 
-- Wolfgang Amadeus Mozart - Symphony no. 40 in G Minor K.550
-- Aram Khat... - Danse du sabre
-- Georges Bizet - Carmen 1 / 2
-- Antonio Vivaldi - "l'estate"
-- Jacques Offenbach - Five Overtures - I. Orpheus In The Underworld

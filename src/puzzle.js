@@ -2,47 +2,68 @@
 draw_p = () => {
   
   if(W== 1){
-    if(p > 30){
+    if(p > 40){
+      set_song(6)
+    }
+    else if(p > 30){
+      set_song(5)
+    }
+    else if(p > 20){
+      set_song(4)
+    }
+    else if(p > 10){
       set_song(3)
     }
-    
-    else if(p > 15){
+    else if(p > 5){
       set_song(2)
     }
-    
     else {
       set_song(1)
     }
   }
   else if(W== 2){
-    if(p > 15){
-      set_song(5)
+    if(p > 30){
+      set_song(10)
     }
-    
+    else if(p > 20){
+      set_song(9)
+    }
+    else if(p > 10){
+      set_song(8)
+    }
     else {
-      set_song(4);
+      set_song(7);
     }
   }
   else if(W== 3){
-    if(p > 30){
-      set_song(8)
-    }
-    
-    else if(p > 15){
-      set_song(7)
-    }
-    
-    else {
+    if(p > 35){
       set_song(6)
+    }
+    else if(p > 25){
+      set_song(5)
+    }
+    else if(p > 15){
+      set_song(4)
+    }
+    else if(p > 5){
+      set_song(3)
+    }
+    else {
+      set_song(2)
     }
   }
   else if(W== 4){
-    if(p > 15){
+    if(p > 30){
       set_song(10)
     }
-    
-    else {
+    else if(p > 20){
       set_song(9)
+    }
+    else if(p > 10){
+      set_song(8)
+    }
+    else {
+      set_song(7);
     }
   }
   
