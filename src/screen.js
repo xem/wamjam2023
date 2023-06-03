@@ -159,7 +159,7 @@ fadeout = (text) => {
     }
   }
   
-  if(lW== 4 && lp > 36 && win){ // 3 - 37 to 40
+  if(lW== 4 && lp > 36 && win){ // 4 - 37 to 40
     setTimeout(()=>e.style.opacity=1, 800);
     text = "<p><table id=ta width=70 height=620>";
     for(k = 1; k < 5; k++){
@@ -203,15 +203,15 @@ fadeout = (text) => {
       setTimeout(()=>{C.$("pu"+ (lp - 36)).style.transform="";},1000);
     }
     setTimeout(()=>e.style.opacity=1, 800);
-    setTimeout(()=>e.style.opacity=0, ((lW== 3 && secret == 10) || (lW== 4 && secret == 4)) ? 11500 : 3500);
-    if(lW== 3 && secret == 10){
+    setTimeout(()=>e.style.opacity=0, ((lW== 4 && secret == 4)) ? 11500 : 3500);
+    /*if(lW== 3 && secret == 10){
       setTimeout(()=>{b.classList.add("egg3");lp = lW= 0;}, 2500);
-    }
+    }*/
     if(lW == 4 && secret == 4){
       setTimeout(()=>{b.classList.add("egg4");lp = lW = 0;}, 2500);
       setTimeout(()=>{open("//xem.github.io/wamjam2023/share#"+JSON.stringify(save))}, 11500);
     }
-    setTimeout(draw_screen, ((lW== 3 && secret == 10) || (lW== 4 && secret == 4)) ? 12000 : 4000);
+    setTimeout(draw_screen, ((lW== 4 && secret == 4)) ? 12000 : 4000);
     
   }
   else {
