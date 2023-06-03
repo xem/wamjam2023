@@ -1,0 +1,85 @@
+﻿<link rel=icon href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+<script src="https://cdn.jsdelivr.net/npm/ipfs@0.58.4/dist/index.min.js"></script>
+
+<h1>IPFS bonus page</h1>
+
+<br>
+<h2>LOSSST is on IPFS!</h2>
+<p>
+<a href="https://ipfs.io/ipfs/QmfBgZHEKnx7RY9uesdTk1594HTWrxCV5QsLjDLzCgwjHC/LOSSST%20a%20snake%20in%20space.html">Play online</a> - 
+<a href="https://ipfs.io/ipfs/QmaMXrRBXDYC7NZNtxLPCQS9SXbwTMQ3qJL5V4j2ufi8fU/LOSSST%20a%20snake%20in%20space.zip">Download zip</a>
+<br>
+<br>
+<br>
+
+<h2>LOSSST jukebox</h3>
+
+<p>Hosted on: IPFS <a href="https://ipfs.io/ipfs/QmXFQEPt5HKesccUbaGtGPugDzTvBeNfEQzDjV7uXzcHXa/jukebox.html">LISTEN</a> / Github <a href="jukebox.html">LISTEN</a>
+
+<br>
+<br>
+<br>
+<h2>Leaderboards</h2>
+<p><b>Coming soon!</b>
+
+
+<!--
+<p>This page allows you to share your LOSSST high scores and see the leaderboards on the IPFS network
+
+<h3>High scores</h3>
+
+<button id=go>GO</button>
+
+<h3>Submit your high score</h3>
+
+<p>(coming soon, in the meantime your high score is saved locally)
+
+<script>
+onload = async() => {
+
+  node = await Ipfs.create();
+
+  /*let data = 'Hello, max3'
+
+  // add your data to to IPFS - this can be a string, a Buffer,
+  // a stream of Buffers, etc
+  const results = await node.add(data)
+
+  // we loop over the results because 'add' supports multiple 
+  // additions, but we only added one entry here so we only see
+  // one log line in the output
+  toto = results.cid.toString();
+  console.log(toto);
+  */
+}
+
+var data;
+
+go.onclick = async () => {
+  
+  stream = await node.ls("QmXjjixpERfBv5mnAo31mbYrBHRSEi2YXxpSHnBfq7aNcq");
+  //console.log(stream);
+
+  for await (const chunk of stream) {
+    console.log(chunk);
+  }
+
+  //console.log(data);
+  
+  a = await node.add({
+      path: 'QmXjjixpERfBv5mnAo31mbYrBHRSEi2YXxpSHnBfq7aNcq/a.txt',
+      content: 'ABC'
+  });
+  
+  console.log(a);
+}
+
+</script>
+-->
+
+<style>
+body { max-width: 600px; margin: auto; background: #000; color: #fff; font-family: calibri, arial; padding: 50px 0 0; text-align: center; }
+h1 { font-size: 35px; }
+h2 { font-size: 30px; }
+a { color: #abf; font-size: 25px; }
+</style>

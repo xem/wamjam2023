@@ -1,0 +1,124 @@
+JS global vars (except functions)
+
+w 
+h  
+world = W OK
+puzzle = p OK
+lastworld = lW OK
+lastpuzzle = lp OK
+coins = C
+win =
+haltwin = h
+snake_position = S OK
+next_target = n OK
+portaling = P
+portals1 = p1
+portals2 = p2
+mirror = m
+custom = M
+html = H ok
+mobile = O
+song_interval = I OK
+time = T
+head_position = hp OK
+previous_position = pp OK
+save = v
+extracoins = E ok
+song = g
+svg = 
+camrx = rx ok
+camrz = rz ok
+data = 
+pointer_down = pd OK
+pointer_start_x = px OK
+pointer_start_y = py OK
+halt = a OK
+canskip = cs ok
+u = 
+r = 
+d = 
+l = 
+U = 
+D =
+songs =
+note =
+A =
+m =
+custom =
+current_puzzle = z OK
+coin =
+head_angles =
+head_angles_modulo = 
+
+
+CSS IDs
+
+viewport = v OK
+camera = c ok
+scene = s ok
+puzzlename = pn OK
+coincount = t OK
+reset = R ok
+fade = f
+presents = e OK
+floordiv = fd OK
+puzzlefloor = pf OK
+puzzlewall = pw OK
+wrap = wr
+head = y ok
+head_scale = h2 ok
+head_circle = h3 ok
+head_decoration = h4 ok
+head_decoration_inner = h5 ok
+head_decoration_tilt = h6 ok
+snakebody = sb ok
+
+CSS classes (warning: case insensitive)
+
+mobile = x ok
+back = b OK
+dpad = d ok
+up = u ok
+dn = n ok
+main = m ok
+menu = z ok
+levels = l ok
+bonus = o ok
+puzzle = p ok
+instant = i ok
+fadein = f ok
+win = win ok
+emoji = e ok
+floor: r ok
+circle = c ok
+stars = s ok
+shadow = w ok
+rocket = t ok
+crater = a ok
+wall = wa
+black = k ok
+tile = v ok
+wall_tile = wt ok
+body = 
+tree = 
+flower =
+animal =
+cube =
+bricks = 
+portal1 = 
+portal2 = 
+sign = 
+red = 
+blue =
+behind =
+egg3 =
+egg4 = 
+intro =
+on_wall =
+high =
+mirroring =
+portaling =
+cubeleft =
+cuberight =
+cubefront =
+cubetop =

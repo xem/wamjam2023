@@ -1,0 +1,75 @@
+﻿<meta name=viewport content=width=device-width,initial-scale=1>
+<meta name=apple-mobile-web-app-capable content=yes>
+<meta name=mobile-web-app-capable content=yes>
+<meta name=monetization content="$pay.stronghold.co/1a1fbf27169a5334158b2c531b946427ceb">
+<link rel=icon href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐍</text></svg>">
+<link rel=stylesheet href='../src/global.css'>
+<link rel=stylesheet href='../src/menu.css'>
+<link rel=stylesheet href='../src/snake.css'>
+<link rel=stylesheet href='../src/puzzle.css'>
+<title>LOSSST</title>
+<body id=body>
+<div id=b class='menu world0'>
+  <div id=v>
+    <div id=c>
+      <div id=s></div>
+    </div>
+  </div>
+  <div class=back onclick="nav_back()">&lt;</div>
+  <div id=ui>
+    Puzzle width <input type=range id=WI min=3 max=7 value=5> &nbsp; &nbsp;
+    Height <input type=range id=HE min=3 max=8 value=5>
+    <br>
+    Snake length <input type=number id=SNAKE min=3 max=30 value=3>&nbsp; &nbsp;
+    World <input type=number id=wor min=1 max=4 value=1>
+    <br>
+    <input type=checkbox id=FLOOR checked> Floor &nbsp; &nbsp;
+    <input type=checkbox id=WALL> Wall &nbsp; &nbsp;
+    <input type=checkbox id=WRAP> Wrap &nbsp; &nbsp;
+    <br>
+    <br>
+    <button onclick='if(confirm("sure?"))location=location'>Reset</button> &nbsp; &nbsp;
+    <button onclick='share()'>Play/share</button>
+  </div>
+</div>
+<script src='../src/global.js'></script>
+<script src='../src/css3d.js'></script>
+<script src='../src/data.js'></script>
+<script src='screen.js'></script>
+<!---script src='../src/input.js'></scrit-->
+<script src='../src/snake.js'></script>
+<script src='../src/puzzle.js'></script>
+<script src='../src/music.js'></script>
+<script>
+draw_screen();
+inte = setInterval(()=>{
+  if(document.monetization && document.monetization.state === 'started'){
+	console.log("thanks for enabling WebMonetization");
+	clearInterval(inte);
+  }
+}, 1000);
+</script>
+
+<style>
+#camera { top: 80% }
+#ui { color: #fff; position: fixed; top: 20px; left: 0; width: 100%; text-align: center; font-size: 20px; line-height: 30px; }
+input, button { background: #555; color: #fff; font: 20px calibri, arial; padding: 0 3px; pointer-events: all; }
+input { max-width: 100px }
+.v { pointer-events: all }
+#pf .v { opacity: 0; }
+#pw .v { opacity: 0; }
+#wrap div { opacity: 0; pointer-events: none; }
+.hasfloor #pf .v { opacity: 1; }
+.haswall #pw .v { opacity: 1; }
+.haswrap #wrap div { opacity: 1; }
+.v * { opacity: 0; pointer-events: none; background: #e40; border: 2px solid #000; }
+.v :nth-child(1) { background: linear-gradient(90deg, #e40 24px, #000 24px, #000 26px, #e40 26px); }
+.v :nth-child(2) { background: linear-gradient(90deg, #e40 17px, #000 17px, #000 19px, #e40 19px, #e40 34px, #000 34px, #000 36px, #e40 36px); }
+.v :nth-child(3) { background: linear-gradient(90deg, #e40 24px, #000 24px, #000 26px, #e40 26px); }
+#pf { background: linear-gradient(#0005 50px, #0000 50px) }
+#wrap .cubefront, #wrap .cubeback, #wrap .cubeleft, #wrap .cuberight {  background: linear-gradient(#0000,#55fd); }
+.tile1 { background : #000 }
+.tile2 { background : radial-gradient(#e0e, #505 70%, #000 75%) }
+.tile3 { background : radial-gradient(#fc0, #c60 70%, #000 75%) }
+.tile4 svg { opacity: 1; }
+</style>
